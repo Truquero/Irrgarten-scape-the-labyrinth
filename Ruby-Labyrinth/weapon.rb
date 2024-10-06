@@ -17,4 +17,8 @@ class Weapon
   def to_s
     return "W[" + @power.to_s + "," + @uses.to_s + "]"
   end
+  def discard
+    aux = Dice.new
+    return aux.discard_element(@uses)
+  end
 end

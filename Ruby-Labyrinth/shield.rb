@@ -16,4 +16,8 @@ def protect
   def to_s
     return "W[" + @protection.to_s + "," + @uses.to_s + "]"
   end
+  def discard
+    aux = Dice.new
+    return aux.discard_element(@uses)
+  end
 end
