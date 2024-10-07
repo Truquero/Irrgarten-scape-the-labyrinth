@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 #encoding : UTF−8
 class Weapon
-  def initialize
-    @power = 2.0
-    @uses = 3
+  def initialize(power, uses)
+    @power = power
+    @uses = uses
   end
   def attack
     if @uses > 0
@@ -15,10 +15,10 @@ class Weapon
   end
 
   def to_s
-    return "W[" + @power.to_s + "," + @uses.to_s + "]"
+    "W[" + @power.to_s + "," + @uses.to_s + "]"
   end
   def discard
-    aux = Dice.new
-    return aux.discard_element(@uses)
+    d = Dice.new
+    d.discardElement(@uses)
   end
 end

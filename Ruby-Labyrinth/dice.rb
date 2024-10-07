@@ -11,23 +11,23 @@ class Dice
   @@MAX_ATTACK = 3
   @@MAX_SHIELD = 2
 
-  def ramdom_pos(max)
-    return rand(max)
+  def ramdomPos(max)
+    rand(max)
   end
 
-  def who_starts(nplayers)
-    return rand(nplayers)
+  def whoStarts(nplayers)
+    rand(nplayers)
   end
 
-  def ramdom_intelligence
-    return rand(@@MAX_INTELLIGENCE)
+  def ramdomIntelligence
+    rand(@@MAX_INTELLIGENCE)
   end
 
-  def ramdom_strength
-    return rand(@@MAX_STRENGTH)
+  def ramdomStrength
+    rand(@@MAX_STRENGTH)
   end
 
-  def resurrect_player
+  def resurrectPlayer
     if rand < @@RESURRECT_PROB
       return true
     else
@@ -35,35 +35,35 @@ class Dice
     end
   end
 
-  def weapons_reward
-    return rand(@@WEAPONS_REWARD)
+  def weaponsReward
+    rand(@@WEAPONS_REWARD)
   end
 
-  def shield_reward
-    return rand(@@SHIELDS_REWARD)
+  def shieldReward
+    rand(@@SHIELDS_REWARD)
   end
 
-  def healing_reward
-    return rand(@@HEALTH_REWARD)
+  def healingReward
+    rand(@@HEALTH_REWARD)
   end
 
-  def weapon_power
-    return rand(@@MAX_ATTACK)
+  def weaponPower
+    rand(@@MAX_ATTACK)
   end
 
-  def shield_power
-    return rand(@@MAX_SHIELD)
+  def shieldPower
+    rand(@@MAX_SHIELD)
   end
 
-  def uses_left
-    return rand(@@MAX_USES)
+  def usesLeft
+    rand(@@MAX_USES)
   end
 
   def intensity(competence)
-    return rand(competence)
+    rand(competence)
   end
 
-  def discard_element(usesLeft)
+  def discardElement(usesLeft)
     if usesLeft == 0
       return true
     end

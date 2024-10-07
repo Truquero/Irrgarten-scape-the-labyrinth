@@ -1,23 +1,23 @@
 # frozen_string_literal: true
 #encoding : UTF−8
 class Shield
-  def initialize
-    @protection=4.0
-    @uses=3
+  def initialize(protection, uses)
+    @protection=protection
+    @uses=uses
   end
-end
-def protect
-  if @uses > 0
-    @uses -= 1
-    return @protection
-  else
-    return 0
+  def protect
+    if @uses > 0
+      @uses -= 1
+      return @protection
+    else
+      return 0
+    end
   end
   def to_s
-    return "W[" + @protection.to_s + "," + @uses.to_s + "]"
+    "W[" + @protection.to_s + "," + @uses.to_s + "]"
   end
   def discard
-    aux = Dice.new
-    return aux.discard_element(@uses)
+    d = Dice.new
+    d.discardElement(@uses)
   end
 end
